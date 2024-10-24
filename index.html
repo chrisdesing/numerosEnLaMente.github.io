@@ -101,7 +101,11 @@
 
 <body>
 
-    <audio autoplay loop>
+    <!-- <audio autoplay loop>
+        <source src="assets/sounds/musica_fondo.mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio> -->
+    <audio id="musica-fondo" loop>
         <source src="assets/sounds/musica_fondo.mp3" type="audio/mpeg">
         Tu navegador no soporta la reproducción de audio.
     </audio>
@@ -228,6 +232,22 @@
             const sonidoCorrecto = document.getElementById('sonido-correcto');
             const sonidoIncorrecto = document.getElementById('sonido-incorrecto');
 
+            // Función para reproducir música de fondo
+            function reproducirMusica() {
+                const musicaFondo = document.getElementById('musica-fondo');
+                musicaFondo.play();
+            }
+
+            // Detecta el primer clic del usuario para empezar a reproducir la música
+            window.addEventListener('click', reproducirMusica, { once: true });
+
+
+            // Función para detectar tecla Enter en computadora
+            function checkEnter(event, fila, operacion) {
+                if (event.key === "Enter") {
+                    validarRespuesta(fila, operacion);
+                }
+            }
             let resultadoCorrecto;
 
             switch (operacion) {
@@ -247,7 +267,7 @@
                     resultadoCorrecto = Math.sqrt(x).toFixed(1); // Limita a 1 decimal
                     break;
                 case 'exponenciacion':
-                    resultadoCorrecto = Math.pow(x, y);
+                    resultadoCorrecto = Math.pow(x, 2);
                     break;
                 default:
                     return;
