@@ -1,0 +1,116 @@
+/* Estilos globales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f8ff;
+}
+
+/* Contenedor principal de la tabla */
+.table-container {
+    width: 90%;
+    max-width: 1200px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow-x: auto;
+}
+
+/* Imagen del encabezado */
+.table-container img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+/* Título del juego */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilos de la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+/* Estilos para las celdas de encabezado */
+thead th {
+    background-color: #87ceeb;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Estilos para las celdas del cuerpo */
+tbody td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilos para los inputs de la tabla */
+input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Estilos para los resultados y mensajes de error */
+.resultado, .mensaje-error {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+/* Estilos de mensajes de error */
+.mensaje-error {
+    color: red;
+}
+
+/* Ajustes responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    thead th, tbody td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    input[type="number"] {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 18px;
+    }
+
+    thead th, tbody td {
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    input[type="number"] {
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    .table-container img {
+        width: 80px;
+    }
+}

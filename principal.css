@@ -1,0 +1,96 @@
+/* Diseño general del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('assets/img/fondo_verde.jpg');
+    background-size: cover;
+}
+
+/* Contenedor principal del juego */
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+}
+
+/* Logo del juego */
+.game-logo {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* Título del juego */
+.game-title {
+    font-size: 36px;
+    color: #ff6347;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/* Diseño de las letras */
+.letters-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.letter {
+    font-size: 40px;
+    padding: 20px;
+    background-color: #87ceeb;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: moveDown 2s infinite ease-in-out; /* Añadimos la animación */
+}
+
+/* Animación para el movimiento de arriba hacia abajo */
+@keyframes moveDown {
+    0% {
+        transform: translateY(-10px); /* Empieza ligeramente arriba */
+    }
+    50% {
+        transform: translateY(10px); /* Baja ligeramente */
+    }
+    100% {
+        transform: translateY(-10px); /* Regresa a su posición original */
+    }
+}
+
+.letter:hover {
+    background-color: #4682b4;
+    transform: scale(1.1);
+}
+
+/* Botón de iniciar */
+.start-button {
+    font-size: 20px;
+    background-color: #ff6347;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.start-button:hover {
+    background-color: #e5533d;
+    transform: scale(1.05);
+}
