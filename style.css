@@ -1,6 +1,6 @@
 /* Estilos globales */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Arial', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
@@ -8,13 +8,16 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #f0f8ff;
+    background-image: url('assets/img/mat.jpg');
+
 }
+
 
 /* Contenedor principal de la tabla */
 .table-container {
     width: 90%;
     max-width: 1200px;
-    background-color: white;
+    background-color: #d6e96e;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -30,9 +33,12 @@ body {
 
 /* Título del juego */
 h1 {
-    font-size: 24px;
+    /* font-family: monospace; */
+    font-family: "Kablammo", system-ui;
+    font-size: 40px;
     margin-bottom: 20px;
-    color: #333;
+    color: #00759f;
+    margin-top: 0;
 }
 
 /* Estilos de la tabla */
@@ -44,17 +50,20 @@ table {
 
 /* Estilos para las celdas de encabezado */
 thead th {
-    background-color: #87ceeb;
+    /* background-color: #ffb854; */
+    background-color: #004963;
+
     color: white;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
-    font-size: 14px;
+    font-size: 22px;
 }
 
 /* Estilos para las celdas del cuerpo */
 tbody td {
     padding: 10px;
     text-align: center;
+    background-color: #ffd437;
 }
 
 /* Estilos para los inputs de la tabla */
@@ -113,4 +122,15 @@ input[type="number"] {
     .table-container img {
         width: 80px;
     }
+}
+
+
+
+.td_initial{
+    background-color: #004963;
+}
+
+
+.color_input{
+    /* background-color: #8da4fb; */
 }

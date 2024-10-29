@@ -78,7 +78,9 @@ function validarRespuesta(fila, operacion) {
         mensajeErrorElemento.style.display = 'none';
         sonidoCorrecto.play(); // Reproduce el sonido correcto
     } else {
-        mensajeErrorElemento.textContent = `✗ (Correcto: ${resultadoCorrecto})`;
+        // mensajeErrorElemento.textContent = `✗ (Incorrecto: ${resultadoCorrecto})`;
+
+        mensajeErrorElemento.textContent = `✗ INCORRECTO`;
         mensajeErrorElemento.style.display = 'inline';
         resultadoElemento.style.display = 'none';
         sonidoIncorrecto.play(); // Reproduce el sonido incorrecto

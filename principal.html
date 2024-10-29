@@ -5,19 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Operaciones Matemáticas</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kablammo&family=Lobster&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- <audio id="musica-fondo" loop>
-        <source src="assets/sounds/musica_fondo.mp3" type="audio/mpeg">
-        Tu navegador no soporta la reproducción de audio.
-    </audio> -->
-
-    <audio id="background-music" autoplay loop>
+    <!-- <audio id="background-music" autoplay loop>
         <source src="assets/sounds/fondo-music.mp3" type="audio/mp3">
-    </audio>
-    
+    </audio> -->
     <div class="table-container">
         
         <!-- Sonido positivo -->
@@ -33,90 +30,129 @@
         </audio>
 
         <img src="./assets/descarga.png" alt="">
+      
         <h1>NÚMEROS EN LA MENTE</h1>
         <table>
-            <thead>
+            <thead >
                 <tr>
                     <th>X</th>
                     <th>Y</th>
                     <th>X + Y</th>
                     <th>X - Y</th>
                     <th>X * Y</th>
-                    <th>x / Y</th>
+                    <th>X / Y</th>
                     <th>√ X</th>
-                    <th>x ^ 2</th>
+                    <th>X ^ 2</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="table_cabezera">
                 <tr>
-                    <td><input type="number" id="x1" placeholder="X"></td>
-                    <td><input type="number" id="y1" placeholder="Y"></td>
+                    <td class="td_initial"><input type="number" id="x1" placeholder="X"></td>
+                    <td class="td_initial"><input type="number" id="y1" placeholder="Y"></td>
                     <td>
-                        <input type="number" class="respuesta" id="respuesta-suma1" onkeydown="checkEnter(event, 1, 'suma')" onblur="validarRespuesta(1, 'suma')">
+                        <input type="number" class="respuesta color_input" id="respuesta-suma1" onkeydown="checkEnter(event, 1, 'suma')" onblur="validarRespuesta(1, 'suma')">
                         <span class="resultado" id="suma1"></span>
-                        <span class="mensaje-error" id="error-suma1">X</span>
+                        <span class="mensaje-error" id="error-suma1"></span>
                     </td>
                     <td>
-                        <input type="number" class="respuesta" id="respuesta-resta1" onkeydown="checkEnter(event, 1, 'resta')" onblur="validarRespuesta(1, 'resta')">
+                        <input type="number" class="respuesta color_input" id="respuesta-resta1" onkeydown="checkEnter(event, 1, 'resta')" onblur="validarRespuesta(1, 'resta')">
                         <span class="resultado" id="resta1"></span>
-                        <span class="mensaje-error" id="error-resta1">X</span>
+                        <span class="mensaje-error" id="error-resta1"></span>
                     </td>
                     <td>
-                        <input type="number" class="respuesta" id="respuesta-multiplicacion1" onkeydown="checkEnter(event, 1, 'multiplicacion')" onblur="validarRespuesta(1, 'multiplicacion')">
+                        <input type="number" class="respuesta color_input" id="respuesta-multiplicacion1" onkeydown="checkEnter(event, 1, 'multiplicacion')" onblur="validarRespuesta(1, 'multiplicacion')">
                         <span class="resultado" id="multiplicacion1"></span>
-                        <span class="mensaje-error" id="error-multiplicacion1">X</span>
+                        <span class="mensaje-error" id="error-multiplicacion1"></span>
                     </td>
                     <td>
-                        <input type="number" class="respuesta" id="respuesta-division1" onkeydown="checkEnter(event, 1, 'division')" onblur="validarRespuesta(1, 'division')">
+                        <input type="number" class="respuesta color_input" id="respuesta-division1" onkeydown="checkEnter(event, 1, 'division')" onblur="validarRespuesta(1, 'division')">
                         <span class="resultado" id="division1"></span>
-                        <span class="mensaje-error" id="error-division1">X</span>
+                        <span class="mensaje-error" id="error-division1"></span>
                     </td>
                     <td>
-                        <input type="number" class="respuesta" id="respuesta-raiz1" onkeydown="checkEnter(event, 1, 'raiz')" onblur="validarRespuesta(1, 'raiz')">
+                        <input type="number" class="respuesta color_input" id="respuesta-raiz1" onkeydown="checkEnter(event, 1, 'raiz')" onblur="validarRespuesta(1, 'raiz')">
                         <span class="resultado" id="raiz1"></span>
-                        <span class="mensaje-error" id="error-raiz1">X</span>
+                        <span class="mensaje-error" id="error-raiz1"></span>
                     </td>
                     <td>
-                        <input type="number" class="respuesta" id="respuesta-exponenciacion1" onkeydown="checkEnter(event, 1, 'exponenciacion')" onblur="validarRespuesta(1, 'exponenciacion')">
+                        <input type="number" class="respuesta color_input" id="respuesta-exponenciacion1" onkeydown="checkEnter(event, 1, 'exponenciacion')" onblur="validarRespuesta(1, 'exponenciacion')">
                         <span class="resultado" id="exponenciacion1"></span>
-                        <span class="mensaje-error" id="error-exponenciacion1">X</span>
+                        <span class="mensaje-error" id="error-exponenciacion1"></span>
                     </td>
                 </tr>
                 <!-- Fila 2 -->
                 <tr>
-                    <td><input type="number" id="x2" placeholder="X"></td>
-                    <td><input type="number" id="y2" placeholder="Y"></td>
+                    <td class="td_initial"><input type="number" id="x2" placeholder="X"></td>
+                    <td class="td_initial"><input type="number" id="y2" placeholder="Y"></td>
                     <td>
-                        <input type="number" class="respuesta" id="respuesta-suma2" onkeydown="checkEnter(event, 2, 'suma')" onblur="validarRespuesta(2, 'suma')">
+                        <input type="number" class="respuesta color_input" id="respuesta-suma2" onkeydown="checkEnter(event, 2, 'suma')" onblur="validarRespuesta(2, 'suma')">
                         <span class="resultado" id="suma2"></span>
-                        <span class="mensaje-error" id="error-suma2">X</span>
+                        <span class="mensaje-error" id="error-suma2"></span>
                     </td>
                     <td>
-                        <input type="number" class="respuesta" id="respuesta-resta2" onkeydown="checkEnter(event, 2, 'resta')" onblur="validarRespuesta(2, 'resta')">
+                        <input type="number" class="respuesta color_input" id="respuesta-resta2" onkeydown="checkEnter(event, 2, 'resta')" onblur="validarRespuesta(2, 'resta')">
                         <span class="resultado" id="resta2"></span>
-                        <span class="mensaje-error" id="error-resta2">X</span>
+                        <span class="mensaje-error" id="error-resta2"></span>
                     </td>
                     <td>
-                        <input type="number" class="respuesta" id="respuesta-multiplicacion2" onkeydown="checkEnter(event, 2, 'multiplicacion')" onblur="validarRespuesta(2, 'multiplicacion')">
+                        <input type="number" class="respuesta color_input" id="respuesta-multiplicacion2" onkeydown="checkEnter(event, 2, 'multiplicacion')" onblur="validarRespuesta(2, 'multiplicacion')">
                         <span class="resultado" id="multiplicacion2"></span>
-                        <span class="mensaje-error" id="error-multiplicacion2">X</span>
+                        <span class="mensaje-error" id="error-multiplicacion2"></span>
                     </td>
                     <td>
-                        <input type="number" class="respuesta" id="respuesta-division2" onkeydown="checkEnter(event, 2, 'division')" onblur="validarRespuesta(2, 'division')">
+                        <input type="number" class="respuesta color_input" id="respuesta-division2" onkeydown="checkEnter(event, 2, 'division')" onblur="validarRespuesta(2, 'division')">
                         <span class="resultado" id="division2"></span>
-                        <span class="mensaje-error" id="error-division2">X</span>
+                        <span class="mensaje-error" id="error-division2"></span>
                     </td>
                     <td>
-                        <input type="number" class="respuesta" id="respuesta-raiz2" onkeydown="checkEnter(event, 2, 'raiz')" onblur="validarRespuesta(2, 'raiz')">
+                        <input type="number" class="respuesta color_input" id="respuesta-raiz2" onkeydown="checkEnter(event, 2, 'raiz')" onblur="validarRespuesta(2, 'raiz')">
                         <span class="resultado" id="raiz2"></span>
-                        <span class="mensaje-error" id="error-raiz2">X</span>
+                        <span class="mensaje-error" id="error-raiz2"></span>
                     </td>
                     <td>
-                        <input type="number" class="respuesta" id="respuesta-exponenciacion2" onkeydown="checkEnter(event, 2, 'exponenciacion')" onblur="validarRespuesta(2, 'exponenciacion')">
+                        <input type="number" class="respuesta color_input" id="respuesta-exponenciacion2" onkeydown="checkEnter(event, 2, 'exponenciacion')" onblur="validarRespuesta(2, 'exponenciacion')">
                         <span class="resultado" id="exponenciacion2"></span>
-                        <span class="mensaje-error" id="error-exponenciacion2">X</span>
+                        <span class="mensaje-error" id="error-exponenciacion2"></span>
                     </td>
                 </tr>
+
+                <!-- Fila 3 -->
+                <tr>
+                    <td class="td_initial"><input type="number" id="x3" placeholder="X"></td>
+                    <td class="td_initial"><input type="number" id="y3" placeholder="Y"></td>
+                    <td>
+                        <input type="number" class="respuesta color_input" id="respuesta-suma3" onkeydown="checkEnter(event, 3, 'suma')" onblur="validarRespuesta(3, 'suma')">
+                        <span class="resultado" id="suma3"></span>
+                        <span class="mensaje-error" id="error-suma3"></span>
+                    </td>
+                    <td>
+                        <input type="number" class="respuesta color_input" id="respuesta-resta3" onkeydown="checkEnter(event, 3, 'resta')" onblur="validarRespuesta(3, 'resta')">
+                        <span class="resultado" id="resta3"></span>
+                        <span class="mensaje-error" id="error-resta3"></span>
+                    </td>
+                    <td>
+                        <input type="number" class="respuesta color_input" id="respuesta-multiplicacion3" onkeydown="checkEnter(event, 3, 'multiplicacion')" onblur="validarRespuesta(3, 'multiplicacion')">
+                        <span class="resultado" id="multiplicacion3"></span>
+                        <span class="mensaje-error" id="error-multiplicacion3"></span>
+                    </td>
+                    <td>
+                        <input type="number" class="respuesta color_input" id="respuesta-division3" onkeydown="checkEnter(event, 3, 'division')" onblur="validarRespuesta(3, 'division')">
+                        <span class="resultado" id="division3"></span>
+                        <span class="mensaje-error" id="error-division3"></span>
+                    </td>
+                    <td>
+                        <input type="number" class="respuesta color_input" id="respuesta-raiz3" onkeydown="checkEnter(event, 3, 'raiz')" onblur="validarRespuesta(3, 'raiz')">
+                        <span class="resultado" id="raiz3"></span>
+                        <span class="mensaje-error" id="error-raiz3"></span>
+                    </td>
+                    <td>
+                        <input type="number" class="respuesta color_input" id="respuesta-exponenciacion3" onkeydown="checkEnter(event, 3, 'exponenciacion')" onblur="validarRespuesta(3, 'exponenciacion')">
+                        <span class="resultado" id="exponenciacion3"></span>
+                        <span class="mensaje-error" id="error-exponenciacion3"></span>
+                    </td>
+                </tr>
+
+               
             </tbody>
         </table>
     </div>
